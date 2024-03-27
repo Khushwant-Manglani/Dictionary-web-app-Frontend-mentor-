@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/assets/images/favicon-k.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/toggleBtn.css">
+  <title>Dictionary web app</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <nav>
+        <div class="nav-left">
+          <div class="logo">
+            <img src="/assets/images/logo.svg" alt="logo">
+          </div>
+        </div>
+        <div class="nav-right">
+          <div class="font-dropdown-btn">
+            <button class="dropdown-btn">Mono</button>
+            <img src="/assets/images/icon-arrow-down.svg" alt="drop-down-arrow">
+            <div class="dropdown-box">
+              <button onclick="sanSerif()">Sans Serif</button>
+              <button onclick="serif()">Serif</button>
+              <button onclick="mono()">Mono</button>
+            </div>
+          </div>
+          <div class="theme">
+            <div class="toggle-btn">
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="theme-logo">
+              <img src="assets/images/icon-moon.svg" alt="moon-icon">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <form class="searchBar" action="">
+      <input type="text">
+      <img src="./assets/images/icon-search.svg" alt="seach-icon" class="seach-icon">
+    </form>
+    <div class="content">
+      <div class="search-word">
+        <div class="left">
+          <div class="word"></div>
+          <div class="phonetic"></div>
+        </div>
+        <div class="right">
+          <button class="play-audio">
+            <img src="assets/images/icon-play.svg" alt="">
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script src="js/dropBtn.js"></script>
+</body>
+</html>
