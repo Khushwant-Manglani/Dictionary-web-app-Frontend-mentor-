@@ -1,4 +1,3 @@
-const body = document.querySelector("body");
 const bodyContainer = document.querySelector(".container")
 const dropDown = document.querySelector(".font-dropdown-btn");
 const dropDownBox = document.querySelector(".dropdown-box");
@@ -33,14 +32,6 @@ function mono() {
   dropDownBtn.innerHTML="Mono";
 }
 
-const toggleCheckbox = document.querySelector("input[type=checkbox]");
-toggleCheckbox.addEventListener("change", (e) => {
-  if(e.target.checked) {
-    body.classList.add("theme-change");
-  } else {
-    body.classList.remove("theme-change");
-  }
-})
 
 
 
