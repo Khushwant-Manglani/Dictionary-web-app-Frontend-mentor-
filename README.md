@@ -31,11 +31,11 @@ Users should be able to:
 
 ### Screenshot
 
-![screenshot]()
+![screenshot](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Click here]()
+- Solution URL: [Click here](https://github.com/Khushwant-Manglani/dictionary-web-app-Frontend-mentor-)
 - Live Site URL: [Click here](URL)
 
 ## My process
@@ -49,4 +49,4 @@ Users should be able to:
 
 ### Author 
 
-- Khushwant Manglani
+- [Khushwant_Manglani]

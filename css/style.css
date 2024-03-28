@@ -4,6 +4,7 @@
   --light-white-color: rgb(244, 244, 244);
   --light-black-color: rgb(45, 45, 45);
   --black-color: rgb(21, 21, 21);
+  --grey-color: rgb(117, 117, 117);
 }
 
 * {
@@ -16,27 +17,27 @@
   /* background-color: red; */
   width: 750px;
   height: 100vh;
+  padding: 0px 10px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5%;
 }
 
 .header {
   /* background-color: green; */
   height: 100px;
-  padding: 10px;
-  padding-bottom: 0;
+  /* padding: 10px; */
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .header nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  /* gap: 500px; */
 }
 
 .nav-left {
@@ -61,7 +62,7 @@
 
 .dropdown-btn {
   border: none;
-  padding: 15px 20px;
+  padding: 15px 10px;
   border-radius: 10%;
   background: none;
 }
@@ -73,7 +74,7 @@
   justify-content: center; 
   padding: 10% 20%;
   border-radius: 20%;
-  box-shadow: 0.5px 0.5px 1px #333, 0.5px 0.5px 1px #333 inset;
+  box-shadow: 0.5px 0.5px 1px var(--light-black-color), 0.5px 0.5px 1px var(--light-black-color) inset;
   position: absolute;
   right: 15%;
   display: none;
@@ -112,9 +113,19 @@
   font-family: monospace;
 }
 
+.bar {
+  width: 2px;
+  height: 35px;
+  background-color: var(--light-white-color);
+}
+
+.theme-change .bar {
+  background-color: var(--light-black-color);
+}
+
 .theme {
   display: flex;
-  gap: 12px;
+  gap: 15px;
   align-items: center;
 }
 
@@ -142,8 +153,8 @@
 
 .searchBar {
   width: 100%;
-  padding-left: 1.5%;
-  padding-right: 1%;
+  /* padding-left: 1.5%;
+  padding-right: 1%; */
   position: relative;
 }
 
@@ -151,7 +162,8 @@
   width: 100%;
   background-color: var(--light-white-color);
   border: none;
-  font-size: large;
+  font-size: x-large;
+  font-weight: bold;
   padding: 3%;
   border-radius: 10px;
 }
@@ -168,29 +180,162 @@
   outline: 2px solid var(--purple-color);
 }
 
-.searchBar img {
+.searchBar button {
+  border: none;
   position: absolute;
-  top: 35%;
+  top: 40%;
   right: 4%;
   cursor: pointer;
 }
 
-@media screen and (max-width: 750px) {
+.theme-change .searchBar button {
+  background-color: var(--light-black-color);
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+
+.upper-content {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left #word {
+  font-size: 3.2rem;
+}
+
+.left #phonetic {
+  color: var(--purple-color);
+  font-size: 1.5rem;
+}
+
+.right .play-audio {
+  border: none;
+  background: none;
+}
+
+.right .play-audio img {
+  width: 75%;
+  margin-top: 10%;
+  cursor: pointer;
+}
+
+.right .play-audio img:hover {
+  border-radius: 50%;
+  transition: 0.5s ease;
+  background-color: rgb(227, 210, 243);
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.pos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.pos .part-of-speech {
+  font-size: x-large;
+}
+
+.pos .line {
+  width: 650px;
+  height: 1px;
+  margin-top: 5px;
+  background-color: var(--light-white-color);
+}
+
+.meaning {
+  color: var(--grey-color);
+  font-size: large;
+}
+
+.definations {
+  margin-top: 4%; 
+  margin-left: 7%;
+}
+
+.definations li {
+  font-size: large;
+  line-height: 1.5;
+}
+
+.definations li::marker {
+  color: var(--purple-color);
+}
+
+.synonyms {
+  font-size: large;
+}
+
+.synonym {
+  color: var(--purple-color);
+  font-size: large;
+}
+
+.synonym:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.source-url {
+  padding: 0% 5%;
+  display: flex;
+  gap: 20px;
+}
+
+.source-url * {
+  color: var(--grey-color);
+  font-size: large;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 760px) {
   .container {
-    width: 550px;
+    width: 100%;
   }
 
+  .nav-right {
+    flex: 1.2;
+  }
+}
+
+@media screen and (max-width: 660px) {
   .nav-right {
     flex: 1.5;
   }
 }
 
-@media screen and (max-width: 550px) {
-  .container {
-    width: 350px;
-  }
-
+@media screen and (max-width: 560px) {
   .nav-right {
-    flex: 4;
+    flex: 2;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .nav-right {
+    flex: 3;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .nav-right {
+    flex: 3.5;
   }
 }

@@ -27,6 +27,7 @@
               <button onclick="mono()">Mono</button>
             </div>
           </div>
+          <div class="bar"></div>
           <div class="theme">
             <div class="toggle-btn">
               <label class="switch">
@@ -41,26 +42,71 @@
         </div>
       </nav>
     </div>
-    <form class="searchBar" action="">
+    <form class="searchBar">
       <input type="text">
-      <img src="./assets/images/icon-search.svg" alt="seach-icon" class="seach-icon">
+      <button type="submit"><img src="./assets/images/icon-search.svg" alt="seach-icon" class="seach-icon"></button>
     </form>
     <div class="content">
-      <div class="search-word">
+      <div class="upper-content">
         <div class="left">
-          <div class="word"></div>
-          <div class="phonetic"></div>
+          <h1 id="word">
+            <!-- Keyword -->
+            <!-- Add word from js -->
+          </h1>
+          <p id="phonetic">
+            <!-- /ˈkiːbɔːd/ -->
+            <!-- Add phonetic from js -->
+          </p>
         </div>
         <div class="right">
           <button class="play-audio">
-            <img src="assets/images/icon-play.svg" alt="">
+            <!-- Add this img from js -->
+            <!-- <img src="assets/images/icon-play.svg" alt=""> -->
           </button>
         </div>
       </div>
-      
+      <!-- Put this with js -->
+      <!-- <div class="bottom-content">
+        <div class="pos">
+          <div class="part-of-speech">noun</div>
+          <div class="line"></div>
+        </div>
+        
+        <div>
+          <div class="meaning">Meaning</div>
+          <ul class="definations">
+            <li>---</li>
+            <li>---</li>
+            <li>---</li>
+          </ul>
+        </div>
+        
+        <div>
+          <span class="synonyms">Synonyms:</span> 
+          <span class="synonym">electronic keyboard</span>
+          <span>,</span>
+          <span class="synonym">-----</span>
+        </div>
+      </div>   -->
+      <!-- <div class="source-url">
+        <div class="source">Source</div>
+        <div id="url">
+          <a href="#">---------------------------------------------</a>
+        </div>
+        <div><img src="./assets/images/icon-new-window.svg" alt=""></div>
+      </div> -->
     </div>
   </div>
   <script src="js/dropBtn.js"></script>
   <script src="js/toggleBtn.js"></script>
+  <script src="js/content.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
