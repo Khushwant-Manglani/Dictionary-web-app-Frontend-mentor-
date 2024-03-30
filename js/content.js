@@ -11,6 +11,7 @@ function getAudio(phonetics) {
     phonetics.forEach((phonetic) => {
       if(phonetic.audio.length) {
         new Audio(phonetic.audio).play();
+        return;
       }
     })
   })
@@ -21,6 +22,15 @@ function createElement(tag, classname, content) {
   if(classname.length) element.classList.add(classname);
   if(content.length) element.innerHTML=content;
   return element;
+}
+
+function findPhonetic(data) {
+  const phoneticText = data.phonetics.reduce((phoneticText, phonetic) => {
+    if(phonetic.text)
+      return phonetic.text;
+  }, 'Not Present');
+  
+  return phoneticText;
 }
 
 function createMeaningWrapper(meaning) {
@@ -59,7 +69,7 @@ function createMeaningWrapper(meaning) {
 function createWordDictionaryPart(data) {
   // Json has an array of objects each objects has the all meaning and part of speech
   document.getElementById("word").innerHTML = data.word;
-  document.getElementById("phonetic").innerHTML = data.phonetic;
+  document.getElementById("phonetic").innerHTML = data.phonetic === undefined ? findPhonetic(data) : data.phonetic;
   appendAudioImage();
   getAudio(data.phonetics);
 

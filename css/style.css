@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .container {
   /* background-color: red; */
   width: 750px;
